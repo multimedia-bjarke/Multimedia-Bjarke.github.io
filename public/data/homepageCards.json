@@ -9,6 +9,7 @@
   },
   {
     "title": "Content Creation",
-    "image": "src/assets/images/Placeholders/ContentPlaceholder.svg"
+    "image": "/images/Placeholders/ContentPlaceholder.svg",
+    "alt": "Content Creation picture placeholder"
   }
 ]

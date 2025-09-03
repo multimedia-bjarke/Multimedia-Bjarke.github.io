@@ -1,4 +1,4 @@
-export default function HomepageCards() {
+export default function HomepageCards(data) {
   return (
     <>
       <section className="title">
@@ -11,8 +11,8 @@ export default function HomepageCards() {
       <section className="cardContainer">
         <a href="design.html">
           <div className="card1">
-            <h2>Design</h2>
-            <img src="images/Placeholders/DesignPlaceholder.svg" alt="" />
+            <h2>{data.title}</h2>
+            <img src={data.image} alt={data.alt} />
           </div>
         </a>
       </section>
