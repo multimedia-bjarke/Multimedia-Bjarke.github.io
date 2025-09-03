@@ -1,18 +1,17 @@
 import { NavLink } from "react-router-dom";
 
 export default function Nav() {
+  console.log("nav component works!");
   return (
     <>
-      <h1>NAV component</h1>
       <nav>
-        <NavLink to="/" end>
+        <NavLink to="/" element="">
           Home
         </NavLink>
         <NavLink to="/project">Project</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>
-      ;
     </>
   );
 }
