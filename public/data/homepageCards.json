@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Design",
+    "image": "/images/design.jpg"
+  },
+  {
+    "title": "Frontend udvikling",
+    "image": "/images/frontend.jpg"
+  },
+  {
+    "title": "Content Creation",
+    "image": "src/assets/images/Placeholders/ContentPlaceholder.svg"
+  }
+]
