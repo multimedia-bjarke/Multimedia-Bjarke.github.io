@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./App.css";
 import Nav from "./components/Nav";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (

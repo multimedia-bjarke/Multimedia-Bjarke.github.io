@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-export default function Project() {
+export default function Projects() {
   const { id } = useParams(); // 👈 grabs the ":id" from the URL
   const [project, setProject] = useState(null);
 
