@@ -4,7 +4,16 @@
     "title": "Portfolio Website",
     "year": 2025,
     "description": "Mit portfolio bygget med React.",
-    "tags": ["React", "Portfolio", "Frontend"],
+    "image": "/img/portfolio.webp",
+    "links": [
+      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Portfolio Website 2",
+    "year": 2024,
+    "description": "Mit portfolio bygget med React.",
     "image": "/img/portfolio.webp",
     "links": [
       { "url": "https://cederdorff.github.io", "text": "React Portfolio" }

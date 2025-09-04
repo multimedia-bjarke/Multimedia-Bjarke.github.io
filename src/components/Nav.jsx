@@ -1,18 +1,32 @@
 import { NavLink } from "react-router-dom";
-import HomePage from "../pages/Home";
 
 export default function Nav() {
-  console.log("nav component works!");
   return (
-    <>
-      <nav>
-        <NavLink to="/" element={<HomePage />}>
-          Home{" "}
-        </NavLink>
-        <NavLink to="/projects">Projects </NavLink>
-        <NavLink to="/about">About </NavLink>
-        <NavLink to="/contact">Contact </NavLink>
-      </nav>
-    </>
+    <nav className="Links">
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? "active-link" : "link")}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/projects"
+        className={({ isActive }) => (isActive ? "active-link" : "link")}
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) => (isActive ? "active-link" : "link")}
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) => (isActive ? "active-link" : "link")}
+      >
+        Contact
+      </NavLink>
+    </nav>
   );
 }

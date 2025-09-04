@@ -1,30 +1,33 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
-  const { id } = useParams(); // 👈 grabs the ":id" from the URL
-  const [project, setProject] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    async function fetchProject() {
+    async function fetchProjects() {
       const response = await fetch("/data/projects.json");
       const data = await response.json();
-
-      // Find the client with matching id
-      const found = data.find((c) => String(c.id) === id);
-      setProject(found);
+      setProjects(data);
     }
-    fetchProject();
-  }, [id]);
+    fetchProjects();
+  }, []);
 
-  if (!project) return <p>Loading...</p>;
+  if (!projects.length) return <p>Loading...</p>;
 
   return (
-    <article>
-      <h2>{client.name}</h2>
-      <p>{client.title}</p>
-      <p>{client.mail}</p>
-      <img src={client.image} alt={client.name} />
-    </article>
+    <section>
+      <h1>Projects</h1>
+      <ul>
+        {projects.map((project) => (
+          <li key={project.id}>
+            <Link to={`/projects/${project.id}`}>
+              <h2>{project.title}</h2>
+            </Link>
+            <p>{project.year}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
